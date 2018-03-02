@@ -3,7 +3,6 @@ Tweet app revisited to build, test, deploy using an automated CI-CD pipeline wit
 [![wercker status](https://app.wercker.com/status/9cac93950da19c6b6ae466fc53458cd0/s/master "wercker status")](https://app.wercker.com/project/byKey/9cac93950da19c6b6ae466fc53458cd0)  [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 
 
-
 ####Introduction:
 
 This post is to help you set up a CI-CD pipeline using wercker for the application running on docker container. Same can be used to scale out or for bigger applications as well. It would serve as a initial starting point to set up pipeline and workflows on wercker.
