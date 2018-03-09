@@ -20,7 +20,7 @@
      - slack-notifier:
          url: $SLACK_URL
          username: werckerbot
-         channel: notifications
+         channel: wercker-notifications
  push-2-docker:
    box: nginx:latest
    
@@ -67,6 +67,10 @@
          name: Recreate all service/containers.
          code: |
            ssh $DEV_REMOTE_USER@$DEV_REMOTE_HOST "cd ~/deployments; sudo /usr/local/bin/docker-compose -f docker-compose.yml create --force-recreate"
+     - script:
+         name: Start all new services/containers
+         code: |
+           ssh $DEV_REMOTE_USER@$DEV_REMOTE_HOST "cd ~/deployments; sudo /usr/local/bin/docker-compose -f docker-compose.yml up"
      - script:
          name: Start all new services/containers
          code: |
